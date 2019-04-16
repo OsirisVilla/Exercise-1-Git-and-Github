@@ -3,7 +3,8 @@ package practice;
 import java.util.Arrays;
 
 public class HelloGit {
-
+	
+	// Comparison between 2 words
 	public String compareTwoStrings(String word1, String word2) {
 
 		try {
@@ -18,8 +19,10 @@ public class HelloGit {
 
 	}
 
+	// Verify the biggest number in a list
 	public boolean sortArray(int a[]) {
 
+		// Find largest number in array
 		int temp;
 
 		for (int i = 0; i < a.length; i++) {
@@ -39,6 +42,7 @@ public class HelloGit {
 
 		System.out.println(Arrays.toString(a)); // print sorted list
 
+		// Find max value
 		int max = a[0];
 
 		for (int i = 0; i < a.length; i++) {
@@ -51,12 +55,14 @@ public class HelloGit {
 
 		System.out.println(max); // print max value
 
+		// Compare largest number with max value
 		if (a[a.length - 1] == max) {
 			return true;
 		}
 		return false;
 	}
-
+	
+	// Sort a list by Ascending and Descending order
 	public void sortString(String[] c) {
 		
 		String temp;
@@ -64,6 +70,15 @@ public class HelloGit {
 		for(int i = 0; i < c.length - 1; i++) {
 	    	  
 	         for (int j = i + 1; j < c.length; j++) {
+	        	 
+	        	 /* < 0 then String calling the method is 
+	        	   lexicographically first
+	        	   
+	        	   == 0 then the two strings are 
+	        	   lexicographically equivalent
+	        	   
+	        	 > 0 then the parameter passed to the 
+	        	   compareTo method is lexicographically first.*/
 	        	 
 	            if(c[i].compareTo(c[j]) > 0) { // > for Ascending order
 	            	
@@ -96,6 +111,7 @@ public class HelloGit {
 		      System.out.println(Arrays.toString(c));
 	}
 	
+	// Count the length of a string
 	public int countLengthString(String c) {
 	    
 		int j = 0;
