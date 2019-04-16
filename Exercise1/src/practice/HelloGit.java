@@ -122,23 +122,5 @@ public class HelloGit {
 		}
 		 return j;   
 	}
-	
-	
-	public static void main(String[] args) {
-
-		HelloGit compare = new HelloGit();
-		System.out.println(compare.compareTwoStrings("Hello", "Hello"));
-		
-		HelloGit sort = new HelloGit();
-		int a[] = new int[] {3, 2, 44, 35};
-		System.out.println(sort.sortArray(a));
-		
-		HelloGit sortString = new HelloGit();
-		String c[] = new String[] {"Hello", "Airplane", "Car", "Zebra"};
-		sortString.sortString(c);
-
-		HelloGit sorting = new HelloGit();
-		System.out.println(sorting.countLengthString("hokla"));
-	}
 
 }
