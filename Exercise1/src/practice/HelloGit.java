@@ -1,11 +1,128 @@
 package practice;
 
+import java.util.Arrays;
+
 public class HelloGit {
 
-	public static void main(String[] args) {
-		
-		System.out.println("Testing this branch");
+	public String compareTwoStrings(String word1, String word2) {
 
+		try {
+			if (word1.equals(word2)) {
+				return "These 2 words are equal";
+			} else {
+				return "These 2 words are not equal";
+			}
+		} catch (NullPointerException ex) {
+			return "You can't compare null objects";
+		}
+
+	}
+
+	public boolean sortArray(int a[]) {
+
+		int temp;
+
+		for (int i = 0; i < a.length; i++) {
+
+			for (int j = 0; j < a.length - 1; j++) {
+
+				if (a[j] > a[j + 1]) { // > for Ascending order
+
+					temp = a[j + 1];
+
+					a[j + 1] = a[j];
+
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a)); // print sorted list
+
+		int max = a[0];
+
+		for (int i = 0; i < a.length; i++) {
+
+			if (max < a[i]) {
+
+				max = a[i];
+			}
+		}
+
+		System.out.println(max); // print max value
+
+		if (a[a.length - 1] == max) {
+			return true;
+		}
+		return false;
+	}
+
+	public void sortString(String[] c) {
+		
+		String temp;
+		
+		for(int i = 0; i < c.length - 1; i++) {
+	    	  
+	         for (int j = i + 1; j < c.length; j++) {
+	        	 
+	            if(c[i].compareTo(c[j]) > 0) { // > for Ascending order
+	            	
+	               temp = c[i];
+	               
+	               c[i] = c[j];
+	               
+	               c[j] = temp;
+	            }
+	         }
+	      }
+		
+	      System.out.println(Arrays.toString(c));
+	      
+	      for(int i = 0; i < c.length - 1; i++) {
+	    	  
+		         for (int j = i + 1; j < c.length; j++) { // < for Descending order
+		        	 
+		            if(c[i].compareTo(c[j]) < 0) {
+		            	
+		               temp = c[i];
+		               
+		               c[i] = c[j];
+		               
+		               c[j] = temp;
+		            }
+		         }
+		      }
+	      
+		      System.out.println(Arrays.toString(c));
+	}
+	
+	public int countLengthString(String c) {
+	    
+		int j = 0;
+		
+		for(int i = 0; i < c.length(); i++) {
+			c.charAt(i);
+			j++;
+		}
+		 return j;   
+	}
+	
+	
+	public static void main(String[] args) {
+
+		HelloGit compare = new HelloGit();
+		System.out.println(compare.compareTwoStrings("Hello", "Hello"));
+		
+		HelloGit sort = new HelloGit();
+		int a[] = new int[] {3, 2, 44, 35};
+		System.out.println(sort.sortArray(a));
+		
+		HelloGit sortString = new HelloGit();
+		String c[] = new String[] {"Hello", "Airplane", "Car", "Zebra"};
+		sortString.sortString(c);
+
+		HelloGit sorting = new HelloGit();
+		System.out.println(sorting.countLengthString("hokla"));
 	}
 
 }
