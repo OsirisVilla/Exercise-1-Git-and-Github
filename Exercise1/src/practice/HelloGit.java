@@ -123,4 +123,51 @@ public class HelloGit {
 		 return j;   
 	}
 
+	public static void main(String[] args) {
+
+		HelloGit compare = new HelloGit();
+		System.out.println(compare.compareTwoStrings("Hello", "Hello"));
+		
+		HelloGit sort = new HelloGit();
+		int a[] = new int[] {3, 2, 44, 35};
+		System.out.println(sort.sortArray(a));
+		
+		HelloGit sortString = new HelloGit();
+		String c[] = new String[] {"Hello", "Airplane", "Car", "Zebra"};
+		sortString.sortString(c);
+
+		HelloGit sorting = new HelloGit();
+		System.out.println(sorting.countLengthString("hokla"));
+		
+		SecondClass small = new SecondClass();
+		int d[] = new int[] {3, 5, 7 ,9, 10};
+		small.smallestNumber(d);
+	}
+	
+}
+
+ class SecondClass {
+	 
+	 public void smallestNumber(int a[]) {
+		 
+		 int temp;
+
+			for (int i = 0; i < a.length; i++) {
+
+				for (int j = 0; j < a.length - 1; j++) {
+
+					if (a[j] < a[j + 1]) { // < for Descending order
+
+						temp = a[j + 1];
+
+						a[j + 1] = a[j];
+
+						a[j] = temp;
+					}
+				}
+			}
+			
+		System.out.println(a[a.length-1]);	
+	 }
+	
 }
