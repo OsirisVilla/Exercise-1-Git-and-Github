@@ -1,8 +1,9 @@
 package practice;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
-public class HelloGit {
+public class FirstClass {
 	
 	// Comparison between 2 words
 	public String compareTwoStrings(String word1, String word2) {
@@ -123,7 +124,6 @@ public class HelloGit {
 		 return j;   
 	}
 
-	
 }
 
  class SecondClass {
@@ -150,4 +150,45 @@ public class HelloGit {
 		System.out.println(a[a.length-1]);	
 	 }
 	
+	public void hashMapMethod() {
+		
+		HashMap<String, Integer> capitalCities = new HashMap<String, Integer>();
+
+		capitalCities.put("Osiris", 28);
+		capitalCities.put("Jose", 24);
+		capitalCities.put("Luis", 32);
+		capitalCities.put("Hector", 25);
+
+		for (String i : capitalCities.keySet()) {
+			System.out.println("Name: " + i + " Age: " + capitalCities.get(i));
+		}
+	}
+	
+	public static void main(String[] args) {
+
+		FirstClass compare = new FirstClass();
+		System.out.println(compare.compareTwoStrings("Hello", "Hello"));
+		
+		FirstClass sort = new FirstClass();
+		int a[] = new int[] {3, 2, 44, 35};
+		System.out.println(sort.sortArray(a));
+		
+		FirstClass sortString = new FirstClass();
+		String c[] = new String[] {"Hello", "Airplane", "Car", "Zebra"};
+		sortString.sortString(c);
+
+		FirstClass sorting = new FirstClass();
+		System.out.println(sorting.countLengthString("hokla"));
+		
+		SecondClass small = new SecondClass();
+		small.smallestNumber(a);
+		
+		SecondClass hash = new SecondClass();
+		hash.hashMapMethod();
+		
+		
+	}
 }
+
+ 
+ 
