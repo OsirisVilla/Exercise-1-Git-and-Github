@@ -152,15 +152,15 @@ public class FirstClass {
 	
 	public void hashMapMethod() {
 		
-		HashMap<String, Integer> capitalCities = new HashMap<String, Integer>();
+		HashMap<String, Integer> namesAndAge = new HashMap<String, Integer>();
 
-		capitalCities.put("Osiris", 28);
-		capitalCities.put("Jose", 24);
-		capitalCities.put("Luis", 32);
-		capitalCities.put("Hector", 25);
+		namesAndAge.put("Osiris", 28);
+		namesAndAge.put("Jose", 24);
+		namesAndAge.put("Luis", 32);
+		namesAndAge.put("Hector", 25);
 
-		for (String i : capitalCities.keySet()) {
-			System.out.println("Name: " + i + " Age: " + capitalCities.get(i));
+		for (String i : namesAndAge.keySet()) {
+			System.out.println("Name: " + i + " Age: " + namesAndAge.get(i));
 		}
 	}
 	
