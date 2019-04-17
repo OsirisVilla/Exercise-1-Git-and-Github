@@ -128,6 +128,7 @@ public class FirstClass {
 
  class SecondClass {
 	 
+	 // Print the smallest number
 	 public void smallestNumber(int a[]) {
 		 
 		 int temp;
@@ -150,7 +151,8 @@ public class FirstClass {
 		System.out.println(a[a.length-1]);	
 	 }
 	
-	public void hashMapMethod() {
+	 // Print value based on the key
+	 public void hashMapMethod() {
 		
 		HashMap<String, Integer> namesAndAge = new HashMap<String, Integer>();
 
